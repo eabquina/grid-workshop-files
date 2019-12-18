@@ -1,0 +1,84 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  padding: 1em;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content 1fr min-content;
+  grid-template-areas: 'title'
+                       'stats'
+                       'score'
+                       'board'
+                       'controls'
+  }
+
+@media screen and (min-width: 640px) {
+  body {
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-areas: 'title stats'
+                         'score stats'
+                         'board board'
+                         'controls controls'
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: 'title board'
+                         'stats board'
+                         'score controls'
+  }
+}
+
+.title {
+  background: peachpuff;
+  grid-area: title;
+  align-self: center;
+}
+
+.score {
+  background: ivory;
+  grid-area: score;
+}
+
+.stats {
+  background: lightcyan;
+  grid-area: stats;
+}
+
+.board {
+  background: palegreen;
+  grid-area: board;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.board_title {
+  grid-area: title;
+}
+
+.controls {
+  background: thistle;
+  grid-area: controls;
+}

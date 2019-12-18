@@ -1,0 +1,88 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  padding: 1em;
+}
+
+input[type=radio] {
+
+}
+
+input[type=radio]:focus + label {
+
+}
+
+input[type=radio]:checked + .config-toggle {
+  background-image: none;
+  background-color: #f5f5f5;
+  box-shadow: 0 1px 3px #fff, inset 0 1px 6px #aaa;
+}
+
+input[type=radio]:checked + .config-toggle span {
+  opacity: 1;
+}
+
+.emoji {
+  font-size: 3em;
+}
+
+.config-toggle {
+  background-color: #f7f7f7;
+  background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+  box-shadow: 0 2px 8px #aaa, inset 0 1px 3px #fff;
+  border: solid 1px transparent;
+  border-radius: 1em;
+  height: 8em;
+  width: 8em;
+  margin: 1em;
+}
+
+.config-toggle:hover {
+  background: #f5f5f5;
+}
+
+.config-toggle span {
+  width: 100%;
+  opacity: 0.5;
+}
+
+body {
+  
+}
+
+header {
+  
+}
+
+h1 {
+  
+}
+
+main {
+  
+}
+
+.config-toggles {
+
+}
+
+button {
+  
+}
+
+button:hover {
+  
+}

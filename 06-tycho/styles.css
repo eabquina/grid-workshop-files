@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Galatia SIL';
+  src: url("fonts/galsilb.eot");
+  src: url("fonts/galsilb.eot?#iefix") format("embedded-opentype"), url("fonts/galsilb.woff2") format("woff2"), url("fonts/galsilb.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+}
+
+main {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+hr {
+
+}
+
+.about {
+
+}
+
+a {
+
+}
+
+img {
+
+}
+
+.location {
+
+}
+
+button {
+
+}
+
+@supports (display: grid) {
+  @media (min-width: 42em) and (min-height: 27em) {
+    main {
+
+    }
+
+    h1 {
+
+    }
+
+    h2 {
+
+    }
+
+    hr {
+
+    }
+
+    .about {
+
+    }
+
+    a {
+
+    }
+
+    a::before {
+
+    }
+
+    img {
+
+    }
+
+    .location {
+
+    }
+
+    .location p {
+
+    }
+
+    button {
+
+    }
+  }
+
+  @media (min-width: 48em) and (min-height: 27em) {
+    hr {
+
+    }
+  }
+}

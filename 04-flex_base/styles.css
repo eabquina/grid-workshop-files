@@ -1,0 +1,86 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+h1, h2 {
+  color: #31a2ac;
+}
+
+hr {
+  border-color: #af1c1c;
+  border-width: 2px;
+}
+
+.markup {
+  margin-bottom: 2em;
+  min-height: 50vh;
+  border: 2px dotted #31a2ac;
+}
+
+.box {
+  height: 4em;
+  width: 4em;
+  border: 1px solid;
+}
+
+.emoji {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Your code for 6.1 Flex directions */
+.directions {
+   display: flex;
+   flex-wrap: wrap;
+   writing-mode: vertical-rl;
+   flex-direction: row-reverse;
+   height: 60vh;
+}
+
+/* Your code for 6.2 Aligning with auto-margins */
+.automargin {
+  display: flex;
+}
+
+.automargin div {
+  border: 1px solid;
+  margin: auto;
+}
+
+/* Your code for 6.3 Aligning along the main axis */
+.mainaxis {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.mainaxis .box {
+  height: 5em;
+  width: 5em;
+  border: 1px solid;
+}
+
+/* Your code for 6.4 Aligning along the cross axis */
+.crossaxis {
+  
+}
+
+/* Your code for 6.5 Packing flex lines */
+.packaxis {
+  display: flex; 
+  flex-wrap: wrap; 
+  align-content: stretch;
+}

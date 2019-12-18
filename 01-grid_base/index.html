@@ -1,0 +1,491 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CSS Grid workshop @ Form, Function Class 9</title>
+  <meta name="description" content="Blank HTML template for CSS Grid workshop">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Layout the web with CSS grid (and friends)</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>0. Layouts before Grid</h2>
+      <p>Examines use of <code>display: inline-block</code>, <code>float</code> and <code>display: flex</code>.</p>
+
+      <h3><code>inline-block</code> technique</h3>
+      <div class="markup inlineblock">
+        <div class="inlineblock__item"><p>Item A</p></div><div class="inlineblock__item"><p>Item B</p></div><div class="inlineblock__item"><p>Item C</p></div><div class="inlineblock__item"><p>Item D</p></div><div class="inlineblock__item"><p>Item E</p></div><div class="inlineblock__item"><p>Item F</p></div>
+      </div>
+
+      <h3><code>float</code> technique</h3>
+      <div class="markup float">
+        <div class="float__item">
+          <p>Item A</p>
+        </div>
+        <div class="float__item">
+          <p>Item B</p>
+        </div>
+        <div class="float__item">
+          <p>Item C</p>
+        </div>
+        <div class="float__item">
+          <p>Item D</p>
+        </div>
+        <div class="float__item">
+          <p>Item E</p>
+        </div>
+        <div class="float__item">
+          <p>Item F</p>
+        </div>
+      </div>
+
+      <h3><code>flexbox</code> technique</h3>
+      <div class="markup flexbox">
+        <div class="flexbox__item">
+          <p>Item A</p>
+        </div>
+        <div class="flexbox__item">
+          <p>Item B</p>
+        </div>
+        <div class="flexbox__item">
+          <p>Item C</p>
+        </div>
+        <div class="flexbox__item">
+          <p>Item D</p>
+        </div>
+        <div class="flexbox__item">
+          <p>Item E</p>
+        </div>
+        <div class="flexbox__item">
+          <p>Item F</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>1. Defining a grid</h2>
+      <p>The first step in Grid layout</p>
+      <div class="markup grid1">
+        <div class="grid1__item">
+          <p>Item A</p>
+        </div>
+        <div class="grid1__item">
+          <p>Item B</p>
+        </div>
+        <div class="grid1__item">
+          <p>Item C</p>
+        </div>
+        <div class="grid1__item">
+          <p>Item D</p>
+        </div>
+        <div class="grid1__item">
+          <p>Item E</p>
+        </div>
+        <div class="grid1__item">
+          <p>Item F</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>2.1 The <code>repeat()</code> function</h2>
+      <p>So you don't need to type the same thing over and over.</p>
+      <div class="markup grid2">
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+        <div class="grid2__item">
+          <p>Item</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2.2 <code>auto-fill</code> versus <code>auto-fit</code></h2>
+      <p>Let the browser do the work for you</p>
+      <div class="markup keyword">
+        <div class="keyword__item">
+          <p>Item A</p>
+        </div>
+        <div class="keyword__item">
+          <p>Item B</p>
+        </div>
+        <div class="keyword__item">
+          <p>Item C</p>
+        </div>
+        <div class="keyword__item">
+          <p>Item D</p>
+        </div>
+        <div class="keyword__item">
+          <p>Item E</p>
+        </div>
+        <div class="keyword__item">
+          <p>Item F</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2.3 <code>grid-auto-row</code> and <code>grid-auto-column</code></h2>
+      <p>Sometimes further instruction is necessary to get what you want</p>
+      <div class="markup grid3">
+        <div class="grid3__item">
+          <p>A</p>
+          <p>A</p>
+        </div>
+        <div class="grid3__item">
+          <p>B</p>
+        </div>
+        <div class="grid3__item">
+          <p>C</p>
+        </div>
+        <div class="grid3__item">
+          <p>D</p>
+        </div>
+        <div class="grid3__item">
+          <p>E</p>
+        </div>
+        <div class="grid3__item">
+          <p>F</p>
+        </div>
+        <div class="grid3__item">
+          <p>G</p>
+        </div>
+        <div class="grid3__item">
+          <p>H</p>
+        </div>
+        <div class="grid3__item">
+          <p>I</p>
+        </div>
+        <div class="grid3__item">
+          <p>J</p>
+        </div>
+        <div class="grid3__item">
+          <p>K</p>
+        </div>
+        <div class="grid3__item">
+          <p>L</p>
+        </div>
+        <div class="grid3__item">
+          <p>M</p>
+        </div>
+        <div class="grid3__item">
+          <p>N</p>
+        </div>
+        <div class="grid3__item">
+          <p>O</p>
+        </div>
+        <div class="grid3__item">
+          <p>P</p>
+        </div>
+        <div class="grid3__item">
+          <p>Q</p>
+        </div>
+        <div class="grid3__item">
+          <p>R</p>
+        </div>
+        <div class="grid3__item">
+          <p>S</p>
+        </div>
+        <div class="grid3__item">
+          <p>T</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2.4 The <code>grid-auto-flow</code> property</h2>
+      <p>Sometimes further instruction is necessary to get what you want</p>
+      <div class="markup grid4">
+        <div class="grid4__item">
+          <p>A</p>
+        </div>
+        <div class="grid4__item">
+          <p>B</p>
+        </div>
+        <div class="grid4__item">
+          <p>C</p>
+        </div>
+        <div class="grid4__item">
+          <p>D</p>
+        </div>
+        <div class="grid4__item">
+          <p>E</p>
+        </div>
+        <div class="grid4__item">
+          <p>F</p>
+        </div>
+        <div class="grid4__item">
+          <p>G</p>
+        </div>
+        <div class="grid4__item">
+          <p>H</p>
+        </div>
+        <div class="grid4__item">
+          <p>I</p>
+        </div>
+        <div class="grid4__item">
+          <p>J</p>
+        </div>
+        <div class="grid4__item">
+          <p>K</p>
+        </div>
+        <div class="grid4__item">
+          <p>L</p>
+        </div>
+        <div class="grid4__item">
+          <p>M</p>
+        </div>
+        <div class="grid4__item">
+          <p>N</p>
+        </div>
+        <div class="grid4__item">
+          <p>O</p>
+        </div>
+        <div class="grid4__item">
+          <p>P</p>
+        </div>
+        <div class="grid4__item">
+          <p>Q</p>
+        </div>
+        <div class="grid4__item">
+          <p>R</p>
+        </div>
+        <div class="grid4__item">
+          <p>S</p>
+        </div>
+        <div class="grid4__item">
+          <p>T</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>3.1 The <code>fr</code> unit</h2>
+      <p>For allocating available free space like the boss you are</p>
+      <div class="markup grid5">
+        <div class="grid5__item">
+          <p>Item A</p>
+        </div>
+        <div class="grid5__item">
+          <p>Item B</p>
+        </div>
+        <div class="grid5__item">
+          <p>Item C</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3.2 The <code>minmax()</code> function</h2>
+      <p>To declare a range of acceptable widths, because you're flexible like that</p>
+      <div class="markup grid6">
+        <div class="grid6__item">
+          <p>Item A</p>
+        </div>
+        <div class="grid6__item">
+          <p>Item B</p>
+        </div>
+        <div class="grid6__item">
+          <p>Item C</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3.3 Content-based sizing</h2>
+      <p>When you only want as much space as you need</p>
+      <div class="markup grid7">
+        <div class="grid7__item">
+          <p>What's worse, lookin' jealous or crazy? Jealous or crazy?</p>
+        </div>
+        <div class="grid7__item">
+          <p>Or like being walked all over lately, walked all over lately</p>
+        </div>
+        <div class="grid7__item">
+          <p>I'd rather be crazy</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>4.1 Line-based placement</h2>
+      <p>So you can place what you want, where you want</p>
+      <div class="markup grid8">
+        <div class="grid8__item">
+          <img src="img/beyonce.png" srcset="img/beyonce@2x.png 2x" alt="Beyoncé at ‘Tidal X 10/15’ concert red carpet in Brooklyn, 2016">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4.2 <code>grid-column</code> and <code>grid-row</code></h2>
+      <p>Because ain't nobody got time to type all that</p>
+      <div class="markup grid9">
+        <div class="grid9__item">
+          <p class="emoji">🍏</p>
+        </div>
+        <div class="grid9__item">
+          <p class="emoji">🍊</p>
+        </div>
+        <div class="grid9__item">
+          <p class="emoji">🥥</p>
+        </div>
+        <div class="grid9__item">
+          <p class="emoji">🥑</p>
+        </div>
+        <div class="grid9__item">
+          <p class="emoji">🍇</p>
+        </div>
+        <div class="grid9__item">
+          <p class="emoji">🍌</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4.3 The <code>span</code> keyword</h2>
+      <p>An alternative method to allocating more space to your grid items</p>
+      <div class="markup grid10">
+        <div class="grid10__item">
+          <img src="img/beyonce.jpg" srcset="img/beyonce@2x.jpg 2x" alt="Beyoncé's gravity-defying performance at the Grammys, 2017">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4.4 Using the <code>grid-area</code> shorthand</h2>
+      <p></p>
+      <div class="markup grid11">
+        <div class="grid11__item">
+          <img src="img/beyonce2.jpg" srcset="img/beyonce2@2x.jpg 2x" alt="Beyoncé for Vogue, Sep 2018">
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>5.1 Naming grid lines</h2>
+      <div class="markup grid12">
+        <div class="grid12__item">
+          <p>Item A</p>
+        </div>
+        <div class="grid12__item">
+          <p>Item B</p>
+        </div>
+        <div class="grid12__item">
+          <p>Item C</p>
+        </div>
+        <div class="grid12__item">
+          <p>Item D</p>
+        </div>
+        <div class="grid12__item">
+          <p>Item E</p>
+        </div>
+        <div class="grid12__item">
+          <p>Item F</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5.2 Naming grid areas</h2>
+      <div class="markup grid13">
+        <div class="grid13__item a">
+          <p>Item A</p>
+        </div>
+        <div class="grid13__item b">
+          <p>Item B</p>
+        </div>
+        <div class="grid13__item c">
+          <p>Item C</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5.2 Naming grid areas</h2>
+      <div class="markup grid13">
+        <div class="grid13__item">
+          <p>Item A</p>
+        </div>
+        <div class="grid13__item">
+          <p>Item B</p>
+        </div>
+        <div class="grid13__item">
+          <p>Item C</p>
+        </div>
+      </div>
+    </section>  
+
+    <hr>
+
+    <section>
+      <h2>6.1 justify/align-content</h2>
+      <div class="markup content">
+        <div class="content_itemA">A</div>
+        <div class="content_itemB">B</div>
+        <div class="content_itemC">C</div>
+        <div class="content_itemD">D</div>
+      </div>
+    </section>  
+
+    <section>
+      <h2>6.2 justify/align-self</h2>
+      <div class="markup self">
+        <div class="self_itemA">A</div>
+        <div class="self_itemB">B</div>
+        <div class="self_itemC">C</div>
+        <div class="self_itemD">D</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6.3 justify/align-items</h2>
+      <div class="markup items">
+        <div class="items_itemA">A</div>
+        <div class="items_itemB">B</div>
+        <div class="items_itemC">C</div>
+        <div class="items_itemD">D</div>
+      </div>
+    </section>  
+  </main>
+</body>
+</html>

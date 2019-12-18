@@ -1,0 +1,106 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  padding: 1em;
+}
+
+input[type=radio] {
+  opacity: 0;
+  position: absolute;
+}
+
+input[type=radio]:focus + label {
+  outline: rgba(77, 97, 171, 0.5) auto 3px;
+}
+
+input[type=radio]:checked + .config-toggle {
+  background-image: none;
+  background-color: #f5f5f5;
+  box-shadow: 0 1px 3px #fff, inset 0 1px 6px #aaa;
+}
+
+input[type=radio]:checked + .config-toggle span {
+  opacity: 1;
+}
+
+.emoji {
+  font-size: calc(1em + 5vmin);
+}
+
+.config-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f7f7f7;
+  background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+  text-align: center;
+  box-shadow: 0 2px 8px #aaa, inset 0 1px 3px #fff;
+  border: solid 1px transparent;
+  border-radius: 1em;
+  max-height: 8em;
+  max-width: 8em;
+  height: 30vmin;
+  width: 30vmin;
+  margin: 1em;
+}
+
+.config-toggle:hover {
+  background: #f5f5f5;
+}
+
+.config-toggle span {
+  width: 100%;
+  opacity: 0.5;
+}
+
+body {
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  height: 4em;
+  color: white;
+  background-image: linear-gradient(to right, indigo, red);
+}
+
+h1 {
+  margin: auto;
+}
+
+main {
+  height: calc(100% - 4em);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.config-toggles {
+  margin: auto;
+}
+
+button {
+  background-color: gold;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 0;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: orange;
+}

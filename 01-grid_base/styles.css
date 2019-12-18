@@ -1,0 +1,313 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+h1, h2 {
+  color: #31a2ac;
+}
+
+hr {
+  border-color: #af1c1c;
+  border-width: 2px;
+}
+
+.markup {
+  margin-bottom: 2em;
+  min-height: 40vh;
+}
+
+.markup div {
+  border: 1px solid;
+  padding: 0 1em;
+}
+
+.emoji {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Your code for 0. Layouts before Grid */
+.inlineblock__item {
+  display: inline-block;
+  width: calc(100% / 3);
+}
+
+.float__item {
+    
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flexbox__item {
+  flex-basis: calc(100% / 3);
+}
+
+/* Your code for 1 Defining a grid */
+.grid1 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+/* Your code for 2.1 The repeat() function */
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+}
+
+/* Your code for 2.2 auto-fill versus auto-fit */
+.keyword {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+}
+
+/* Your code for 2.3 grid-auto-row and grid-auto-column */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-rows: 100px;
+}
+
+/* Your code for 2.4 The grid-auto-flow property */
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: column;
+}
+
+.grid4__item:nth-child(3n+1) {
+  grid-column-end: span 2;
+}
+
+.grid4__item:nth-child(2n+3) {
+  grid-row-end: span 2;
+}
+
+.grid4__item:nth-child(3n+5) {
+  grid-column-end: span 3;
+}
+
+/* Your code for 3.1 The fr unit */
+.grid5 {
+  display: grid;
+  grid-template-columns: 150px 1fr 2fr;
+}
+
+/* Your code for 3.2 The minmax() function */
+.grid6 {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 300px 300px;
+}
+
+/* Your code for 3.3 Content-based sizing */
+.grid7 {
+  display: grid;
+  grid-template-columns: min-content fit-content(25ch) max-content;
+}
+
+/* Your code for 4.1 Line-based placement */
+.grid8 {
+  display: grid; 
+  grid-template-columns: 33% 33% 33%; 
+  grid-template-rows: 20vh 20vh 20vh;
+}
+
+.grid8__item {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+/* Your code for 4.2 Using the grid-row and grid-column shorthands */
+.grid9 {
+  display: grid;
+  grid-template-columns: 5em 5em 5em 5em 5em 5em;
+  grid-template-rows: 5em 5em 5em 5em 5em 5em;
+}
+
+.grid9__item:nth-child(1) {
+  grid-row: 2 / 4;
+  grid-column: 3 / 5;
+
+}
+
+.grid9__item:nth-child(2) {
+
+}
+
+.grid9__item:nth-child(3) {
+
+}
+
+.grid9__item:nth-child(4) {
+
+}
+
+.grid9__item:nth-child(5) {
+
+}
+
+.grid9__item:nth-child(6) {
+
+}
+
+/* Your code for 4.3 The span keyword */
+.grid10 {
+  display: grid; 
+  grid-template-columns: 20% 20% 20% 20% 20%; 
+  grid-template-rows: 12vh 12vh 12vh 12vh 12vh;
+}
+
+.grid10__item {
+  grid-column: 3 / span 3;
+  grid-row: 3;
+}
+
+.grid10__item img {
+  max-height: 100%;
+
+}
+
+/* Your code for 4.4 Using the grid-area shorthand */
+.grid11 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%; 
+  grid-template-rows: 20vh 20vh 20vh;
+}
+
+.grid11__item {
+  grid-area: 1 / 3 / 4 / 5;
+}
+
+/* Your code for 5.1 Naming grid lines */
+.grid12 {
+  display: grid;
+}
+
+.grid12 .c {
+
+}
+
+/* Your code for 5.2 Naming grid areas */
+.grid13 {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px; 
+  grid-template-rows: 100px 100px 100px; 
+  grid-template-areas: 'batman batman . .' 
+                       '. . b b' 
+                       '. c c c';
+}
+
+.grid13 .a {
+  grid-area: batman;
+}
+
+.grid13 .b {
+  grid-area: b;
+}
+
+.grid13 .c {
+  grid-area: c;
+}
+
+/* Your code for 6.1 justify/align-content */
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  grid-template-rows: repeat(3, 20%);
+  grid-gap: 1em;
+  grid-template-areas: "a b b"
+                       "a b b"
+                       "c c d";
+
+                       
+}
+
+.content_itemA {
+  grid-area: a;
+}
+
+.content_itemB {
+  grid-area: b;
+}
+
+.content_itemC {
+  grid-area: c;
+}
+
+.content_itemD {
+  grid-area: d;
+}
+
+/* Your code for 6.2 justify/align-self */
+.self {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: calc(25% - 1em);
+  grid-template-areas: "a a b b"
+                       "a a b b"
+                       "c c d d"
+                       "c c d d";
+}
+
+.self_itemA {
+  grid-area: a;
+}
+
+.self_itemB {
+  grid-area: b;
+}
+
+.self_itemC {
+  grid-area: c;
+}
+
+.self_itemD {
+  grid-area: d;
+}
+
+/* Your code for 6.3 justify/align-items */
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: calc(25% - 1em);
+  grid-template-areas: "a a b b"
+                       "a a b b"
+                       "c c d d"
+                       "c c d d";
+}
+
+.items_itemA {
+  grid-area: a;
+}
+
+.items_itemB {
+  grid-area: b;
+}
+
+.items_itemC {
+  grid-area: c;
+}
+
+.items_itemD {
+  grid-area: d;
+}

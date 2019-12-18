@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Simple configuration page layout</title>
+  <meta name="description" content="Responsive configuration page layout with flexbox">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <h1>Configuration</h1>
+  </header>
+
+  <main>
+    <div class="config-toggles">
+      <h2>Toggle mood</h2>
+      <input id="happy" type="radio" name="mood" checked>
+      <label for="happy" class="config-toggle">
+        <span class="emoji" role="img" aria-label="grinning face with smiling eyes">&#x1F601;</span>
+        <span>Happy</span>
+      </label>
+      <input id="angry" type="radio" name="mood">
+      <label for="angry" class="config-toggle">
+        <span class="emoji" role="img" aria-label="pouting face">&#x1F621;</span>
+        <span>Angry</span>
+      </label>
+    </div class="config-toggles">
+
+    <div class="config-toggles">
+      <h2>Adjust weather</h2>
+      <input id="sunny" type="radio" name="weather" checked>
+      <label for="sunny" class="config-toggle">
+        <span class="emoji" role="img" tabindex="0" aria-label="sun">&#x2600;&#xFE0F;</span>
+        <span>Sunny</span>
+      </label>
+      <input id="stormy" type="radio" name="weather">
+      <label for="stormy" class="config-toggle">
+        <span class="emoji" role="img" tabindex="0" aria-label="cloud with lightning and rain">&#x26C8;&#xFE0F;</span>
+        <span>Stormy</span>
+      </label>
+    </div class="config-toggles">
+
+    <button type="button">Done</button>
+  </main>
+</body>
+
+</html>
